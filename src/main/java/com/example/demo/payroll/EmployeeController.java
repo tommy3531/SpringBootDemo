@@ -1,18 +1,17 @@
-package payroll;
+package com.example.demo.payroll;
 
 
 import com.example.demo.DemoApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.context.ApplicationContext;
 
 
 import java.util.List;
 
-@Controller
+@RestController
 public class EmployeeController {
 
-    private final EmployeeRepository repository;
+    EmployeeRepository repository;
 
     EmployeeController(EmployeeRepository repository) {
         this.repository = repository;

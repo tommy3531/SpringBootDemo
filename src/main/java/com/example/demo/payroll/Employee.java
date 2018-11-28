@@ -1,4 +1,4 @@
-package payroll;
+package com.example.demo.payroll;
 
 import lombok.Data;
 
@@ -6,9 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Data
 @Entity
-class Employee {
+@Data
+public class Employee {
 
     private @Id @GeneratedValue Long id;
     private String firstName;
@@ -16,9 +16,29 @@ class Employee {
     private String role;
     private String name;
 
-    Employee(String name, String role) {
+    Employee(String firstName, String lastName, String name, String role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.name = name;
         this.role = role;
+    }
+
+    Employee(){}
+
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+
+    public String getLastName(){
+        return this.lastName;
+    }
+
+    public void setLastName(String lastName){
+        this.lastName = lastName;
     }
 
     public String getName() {
