@@ -1,5 +1,8 @@
 package com.example.demo.model;
 
+import lombok.Data;
+
+import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
 

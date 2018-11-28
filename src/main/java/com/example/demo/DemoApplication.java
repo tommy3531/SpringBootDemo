@@ -17,11 +17,6 @@ public class DemoApplication {
 		SpringApplication.run(PropublicaController.class, args);
 
 	}
-
-	@Bean
-	public CommandLineRunner DBInit() {
-		return new DBInit();
-	}
 }
 
 
