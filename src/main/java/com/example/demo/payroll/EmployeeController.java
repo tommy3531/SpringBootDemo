@@ -18,7 +18,6 @@ public class EmployeeController {
     }
 
     // Aggregate root
-
     @GetMapping("/employees")
     List<Employee> all() {
         return repository.findAll();
@@ -30,7 +29,6 @@ public class EmployeeController {
     }
 
     // Single item
-
     @GetMapping("/employees/{id}")
     Employee one(@PathVariable Long id) {
 
